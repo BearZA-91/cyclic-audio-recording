@@ -11,7 +11,9 @@ Record audio in a similar fashion to a dashcam, but just audio.
 - Make sure to install and start 'audio-recorder'. This installation will be different per distribution.
   - I am using this one on my Arch-based distro: https://aur.archlinux.org/packages/audio-recorder
 - Once started, edit your settings to your liking in the app, making sure to note where you are saving the recordings to.
-- Then, edit the bash script to match your recording folder.
+### This next step is important! ***Warning***
+- Then, edit the bash script to match your recording folder. ***This is crucial*** or else the script may ***delete files from your home folder***!
+  - You need to edit line 18: `cd /home/username/audiofiles` to match what you set in your app, such as `cd /home/myusername/audiorecordings`.
 - Place this script in your home folder.
 
 Now you can make the script executable using: `chmod +x cyclicaudio.sh` (using a terminal from your home folder)
